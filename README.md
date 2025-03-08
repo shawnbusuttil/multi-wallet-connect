@@ -50,7 +50,7 @@ There is a `Connector.tsx` component to represent each wallet. It shows connecte
 
 ## Assumptions
 
-- Ethereum, Polygon, Base or Sepolia are the supported chains for the EVM wallet. Sepolia is unsupported by LI.FI and so it is a great way to test for the error state when loading tokens.
+- Ethereum, Polygon, Base or Sepolia are the supported chains for the EVM wallet. Sepolia is not supported by LI.FI and so it is a great way to test for the error state when loading tokens.
 
 - All token balances are those which are fungible (no NFTs).
 
@@ -60,9 +60,6 @@ There is a `Connector.tsx` component to represent each wallet. It shows connecte
 
 ## Other Challenges and Improvements
 
-- Wallet modals in Rainbow Kit made it quite difficult to unit test disconnect.
 - Unit tests are not perfect and need some improvements, notably Solana.
-- It's my first time working with non-EVM so I might have overlooked some things.
-- Due to time constraints, some refactoring is still possible, namely remaining magic strings/numbers and repetitive code.
-- Bitcoin doesn't have auto connect on reload.
-- Due to time constraints, some unit tests have been skipped and some unit test mocks have an enforced `any` type to speed up development.
+- Bitcoin doesn't have auto-connect on reload.
+- Solana doesn't work as well with Solflare as it does with Phantom.
